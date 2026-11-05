@@ -1,0 +1,349 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Hand It Over Cleaning &amp; Painting | Pittsburgh</title>
+<meta name="description" content="Hand It Over: cleaning and painting for Pittsburgh homes and businesses. Recurring and deep cleaning, move-outs, interior and exterior painting. Free quotes. Hablamos español.">
+<link rel="canonical" href="https://handitoverpgh.com/">
+<link rel="icon" type="image/png" href="assets/favicon.png">
+<link rel="apple-touch-icon" href="assets/favicon.png">
+<meta name="theme-color" content="#003893">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Hand It Over Cleaning &amp; Painting">
+<meta property="og:description" content="Hand It Over: cleaning and painting for Pittsburgh homes and businesses. Recurring and deep cleaning, move-outs, interior and exterior painting. Free quotes. Hablamos español.">
+<meta property="og:url" content="https://handitoverpgh.com/">
+<meta property="og:image" content="https://handitoverpgh.com/assets/og-image.png">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;600;700;800;900&display=swap">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "HouseCleaningService", "name": "Hand It Over Cleaning & Painting", "url": "https://handitoverpgh.com", "image": "https://handitoverpgh.com/assets/og-image.png", "areaServed": "Pittsburgh, PA", "knowsLanguage": ["en", "es"], "legalName": "Clean and Pure LLC", "telephone": "+1-412-266-2242", "email": "info@handitoverpgh.com"}</script>
+</head>
+<body>
+<style>
+/* Layout: brand-blue bands (hero, quote) bracket white working sections; stacked wordmark is the one loud moment */
+:root{
+  --blue:#003893; --blue-deep:#00296E; --blue-line:#2B5BB0; --tint:#EEF2FA; --line:#D3DCEC;
+  --yellow:#FCD116; --red:#CE1126; --ink:#13203D; --muted:#46526D; --paper:#FFFFFF;
+  --f-display:'Archivo', 'Arial Black', 'Helvetica Neue', Arial, sans-serif;
+  --f-body:'Archivo', 'Helvetica Neue', Arial, sans-serif;
+  --gut-l:max(16px, env(safe-area-inset-left, 0px)); --gut-r:max(16px, env(safe-area-inset-right, 0px));
+  color-scheme:light;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:84px}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{background:var(--paper);color:var(--ink);font-family:var(--f-body);font-size:17px;line-height:1.55;margin:0}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:10;background:var(--blue)}
+a{color:inherit}
+a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible{outline:3px solid var(--yellow);outline-offset:2px}
+.wrap{max-width:1140px;margin:0 auto;padding-left:var(--gut-l);padding-right:var(--gut-r)}
+h1,h2,h3{text-wrap:balance;margin:0}
+p{margin:0}
+
+/* buttons */
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:0 22px;border-radius:999px;font-weight:800;font-size:16px;text-decoration:none;border:2px solid transparent;transition:transform .15s ease, background-color .15s ease}
+.btn:hover{transform:translateY(-1px)}
+.btn-y{background:var(--yellow);color:var(--blue)}
+.btn-y:hover{background:#FFE04D}
+.btn-b{background:var(--blue);color:var(--paper)}
+.btn-b:hover{background:var(--blue-deep)}
+.btn-ghost{border-color:rgba(255,255,255,.55);color:var(--paper)}
+.btn-ghost:hover{border-color:var(--paper)}
+.btn-sm{min-height:42px;padding:0 18px;font-size:15px}
+
+/* HIO icon */
+.hio{width:40px;height:40px;border-radius:10px;background:var(--blue);display:inline-flex;flex-direction:column;align-items:center;justify-content:center;gap:3px;flex-shrink:0}
+.hio b{font-family:var(--f-display);font-weight:900;font-size:15px;line-height:1;letter-spacing:-.3px;color:var(--yellow)}
+.hio .bars{display:flex;gap:2px}
+.hio .bars span{height:3px;border-radius:2px;width:5px;background:var(--paper)}
+.hio .bars span:first-child{width:9px;background:var(--yellow)}
+.hio .bars span:last-child{background:var(--red)}
+
+/* header */
+.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:9;background:var(--blue);border-bottom:1px solid var(--blue-line)}
+.top-in{display:flex;align-items:center;gap:24px;min-height:68px}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--paper)}
+.brand .hio{background:var(--paper)}
+.brand .hio b{color:var(--blue)}
+.brand .hio .bars span{background:var(--blue)}
+.brand .hio .bars span:first-child{background:var(--yellow)}
+.brand .hio .bars span:last-child{background:var(--red)}
+.brand-name{font-family:var(--f-display);font-weight:900;font-size:19px;letter-spacing:-.3px}
+.nav{display:flex;gap:26px;margin-left:auto}
+.nav a{color:var(--paper);text-decoration:none;font-weight:600;font-size:15px;opacity:.9}
+.nav a:hover{opacity:1;text-decoration:underline;text-underline-offset:4px}
+@media (max-width:760px){.nav{display:none}.top-in .btn{margin-left:auto}}
+
+/* hero */
+.hero{background:var(--blue);color:var(--paper);position:relative}
+.hero-in{display:flex;flex-wrap:wrap;align-items:center;gap:48px 64px;padding-block:72px 88px}
+.mark{font-family:var(--f-display);font-weight:900;font-size:clamp(68px,11vw,136px);line-height:.88;letter-spacing:-.03em;display:flex;flex-direction:column;align-items:flex-start;gap:.06em;flex:0 1 auto}
+.mk-row{display:flex;align-items:center;gap:.16em}
+.mk-it{background:var(--yellow);color:var(--blue);padding:.04em .14em 0;border-radius:.08em}
+.mk-tag{font-size:.15em;font-weight:800;letter-spacing:.2em;line-height:1.45;color:var(--yellow)}
+.mk-dot{display:inline-block;width:.2em;height:.2em;border-radius:50%;background:var(--red);margin-left:.06em}
+.hero-copy{flex:1 1 340px;min-width:0;display:flex;flex-direction:column;gap:18px;max-width:520px}
+.eyebrow{font-size:13px;font-weight:800;letter-spacing:.2em;text-transform:uppercase;color:var(--yellow)}
+.eyebrow-red{color:var(--red)}
+.hero-h{font-family:var(--f-display);font-weight:900;font-size:clamp(34px,4.6vw,52px);line-height:1.02;letter-spacing:-.02em}
+.hero-h .dot{color:var(--red)}
+.hero-p{font-size:19px;color:#DCE5F6;max-width:44ch}
+.hero-cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:6px}
+.es{font-weight:700;color:var(--yellow);font-size:15px}
+.flag{position:absolute;left:0;right:0;bottom:0;display:flex;flex-direction:column}
+.flag span:first-child{height:14px;background:var(--yellow)}
+.flag span:last-child{height:7px;background:var(--red)}
+
+/* section heads */
+.sec{padding-block:88px}
+.sec-head{display:flex;flex-direction:column;gap:10px;margin-bottom:40px;max-width:640px}
+.sec-h{font-family:var(--f-display);font-weight:900;font-size:clamp(30px,4vw,44px);line-height:1.05;letter-spacing:-.02em;color:var(--blue)}
+
+/* two doors */
+.door-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,420px),1fr));gap:24px}
+.door{border:2px solid var(--blue);border-radius:20px;display:flex;flex-direction:column;overflow:hidden;background:var(--paper)}
+.door-top{background:var(--blue);color:var(--paper);padding:26px 28px 24px;display:flex;flex-direction:column;gap:6px}
+.door-biz .door-top{background:var(--ink)}
+.door-biz{border-color:var(--ink)}
+.door-k{font-size:13px;font-weight:800;letter-spacing:.2em;text-transform:uppercase;color:var(--yellow)}
+.door-top h3{font-family:var(--f-display);font-weight:900;font-size:28px;line-height:1.1;letter-spacing:-.01em}
+.checks{list-style:none;margin:0;padding:24px 28px 8px;display:flex;flex-direction:column;gap:16px;flex:1}
+.checks li{display:grid;grid-template-columns:24px 1fr;column-gap:12px}
+.checks li::before{content:"";grid-row:span 2;width:22px;height:22px;margin-top:2px;border-radius:50%;background:var(--yellow) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 22 22'%3E%3Cpath d='M6.5 11.3 9.6 14.3 15.5 8' fill='none' stroke='%23003893' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center/22px no-repeat}
+.checks strong{font-weight:800;font-size:18px;color:var(--ink)}
+.checks span{color:var(--muted);font-size:16px}
+.door .btn{margin:20px 28px 28px;align-self:flex-start}
+.door-biz .btn-b{background:var(--ink)}
+
+/* how it works */
+.how{background:var(--tint)}
+.steps{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,260px),1fr));gap:20px}
+.steps li{background:var(--paper);border-radius:18px;padding:28px;display:flex;flex-direction:column;gap:10px;border:1px solid var(--line)}
+.steps .n{width:44px;height:44px;border-radius:12px;background:var(--blue);color:var(--yellow);font-family:var(--f-display);font-weight:900;font-size:22px;display:flex;align-items:center;justify-content:center}
+.steps li:last-child .n{background:var(--red);color:var(--paper)}
+.steps h3{font-family:var(--f-display);font-weight:900;font-size:22px;color:var(--blue);margin-top:6px}
+.steps p{color:var(--muted)}
+
+/* why */
+.why-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,260px),1fr));gap:20px 40px}
+.why-item{display:flex;flex-direction:column;gap:8px;padding-top:18px;border-top:4px solid var(--yellow)}
+.why-item:nth-child(2){border-top-color:var(--blue)}
+.why-item:nth-child(3){border-top-color:var(--red)}
+.why-item h3{font-family:var(--f-display);font-weight:900;font-size:22px;color:var(--ink)}
+.why-item p{color:var(--muted)}
+
+/* quote */
+.quote{background:var(--blue);color:var(--paper)}
+.quote-in{display:flex;flex-wrap:wrap;gap:40px 64px;padding-block:88px}
+.quote-side{flex:1 1 300px;min-width:0;display:flex;flex-direction:column;gap:16px;max-width:420px}
+.quote-side .sec-h{color:var(--paper)}
+.quote-side>p{color:#DCE5F6;font-size:18px}
+.contact{display:grid;grid-template-columns:auto 1fr;gap:6px 16px;margin-top:12px;padding-top:20px;border-top:1px solid var(--blue-line)}
+.c-label{font-size:13px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--yellow);padding-top:3px}
+.c-val{font-weight:700;font-size:17px;user-select:all;overflow-wrap:anywhere}
+.form{flex:2 1 460px;min-width:0;background:var(--paper);color:var(--ink);border-radius:22px;padding:32px;display:flex;flex-direction:column;gap:18px}
+.form fieldset{border:0;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:10px;align-items:center}
+.form legend{font-weight:800;font-size:15px;margin-bottom:10px;width:100%}
+.pill{position:relative}
+.pill input{position:absolute;opacity:0;inset:0;margin:0;cursor:pointer}
+.pill span{display:inline-flex;align-items:center;min-height:44px;padding:0 20px;border-radius:999px;border:2px solid var(--line);font-weight:700;font-size:15px;color:var(--muted)}
+.pill input:checked+span{border-color:var(--blue);background:var(--blue);color:var(--paper)}
+.pill input:focus-visible+span{outline:3px solid var(--yellow);outline-offset:2px}
+.fgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,220px),1fr));gap:16px}
+.field{display:flex;flex-direction:column;gap:6px;min-width:0}
+.field label{font-weight:700;font-size:14px}
+.field input,.field select,.field textarea{font:inherit;font-size:16px;color:var(--ink);background:var(--paper);border:2px solid var(--line);border-radius:12px;padding:11px 14px;min-height:48px;width:100%}
+.field textarea{min-height:120px;resize:vertical}
+.field input:focus,.field select:focus,.field textarea:focus{border-color:var(--blue);outline:none}
+.form .btn{align-self:flex-start;border:0;cursor:pointer;font-family:inherit}
+.form-note{font-size:14px;color:var(--muted)}
+.form-note.ok{color:var(--blue);font-weight:700}
+.hp{position:absolute;left:-9999px}
+
+/* footer */
+.foot{background:var(--ink);color:#C9D2E6}
+.foot-in{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:24px;padding-block:40px}
+.foot-brand{display:flex;align-items:center;gap:14px}
+.foot-brand strong{display:block;color:var(--paper);font-family:var(--f-display);font-weight:900;font-size:18px}
+.foot-brand span{font-size:14px}
+.foot-meta{font-size:14px;display:flex;flex-direction:column;gap:2px;text-align:right}
+@media (max-width:600px){.foot-meta{text-align:left}.form{padding:22px}.hero-in{padding-block:52px 72px}.sec{padding-block:64px}}
+</style>
+
+<header class="top">
+  <div class="wrap top-in">
+    <a class="brand" href="#top" aria-label="Hand It Over, back to top">
+      <span class="hio" aria-hidden="true"><b>HIO</b><span class="bars"><span></span><span></span><span></span></span></span>
+      <span class="brand-name">Hand It Over</span>
+    </a>
+    <nav class="nav" aria-label="Main">
+      <a href="#home">For homes</a>
+      <a href="#business">For businesses</a>
+      <a href="#how">How it works</a>
+    </nav>
+    <a class="btn btn-y btn-sm" href="#quote">Free quote</a>
+  </div>
+</header>
+
+<main>
+  <section class="hero" id="top">
+    <div class="wrap hero-in">
+      <h1 class="mark" aria-label="Hand It Over">
+        <span aria-hidden="true">HAND</span>
+        <span class="mk-row" aria-hidden="true"><span class="mk-it">IT</span><span class="mk-tag">CLEANING<br>&amp; PAINTING</span></span>
+        <span aria-hidden="true">OVER<span class="mk-dot"></span></span>
+      </h1>
+      <div class="hero-copy">
+        <p class="eyebrow">Pittsburgh, PA</p>
+        <h2 class="hero-h">Your mess, our job<span class="dot">.</span></h2>
+        <p class="hero-p">Cleaning and painting for Pittsburgh homes and businesses. Tell us what needs doing, then hand it over.</p>
+        <div class="hero-cta">
+          <a class="btn btn-y" href="#quote">Get a free quote</a>
+          <a class="btn btn-ghost" href="tel:+14122662242">Call or text 412-266-2242</a>
+        </div>
+        <p class="es">Hablamos español</p>
+      </div>
+    </div>
+    <div class="flag" aria-hidden="true"><span></span><span></span></div>
+  </section>
+
+  <section class="sec" aria-labelledby="doors-h">
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="eyebrow eyebrow-red">What we do</p>
+        <h2 class="sec-h" id="doors-h">What can we take off your plate?</h2>
+      </div>
+      <div class="door-grid">
+        <article class="door" id="home">
+          <div class="door-top">
+            <p class="door-k">For your home</p>
+            <h3>Houses, apartments and rentals</h3>
+          </div>
+          <ul class="checks">
+            <li><strong>Recurring cleaning</strong><span>Weekly, every 2 weeks or monthly</span></li>
+            <li><strong>Deep cleans</strong><span>Baseboards, appliances and the spots that get skipped</span></li>
+            <li><strong>Move-in and move-out</strong><span>Ready for the next set of keys</span></li>
+            <li><strong>Interior painting</strong><span>Rooms, ceilings, trim and doors</span></li>
+            <li><strong>Exterior painting</strong><span>Siding, trim, porches and fences</span></li>
+          </ul>
+          <a class="btn btn-b" href="#quote" data-type="type-home">Quote for my home</a>
+        </article>
+        <article class="door door-biz" id="business">
+          <div class="door-top">
+            <p class="door-k">For your business</p>
+            <h3>Offices, shops and commercial spaces</h3>
+          </div>
+          <ul class="checks">
+            <li><strong>Office cleaning</strong><span>Scheduled visits that work around your hours</span></li>
+            <li><strong>Commercial cleaning</strong><span>Shops, studios, lobbies and common areas</span></li>
+            <li><strong>Commercial painting</strong><span>Interior and exterior refreshes</span></li>
+          </ul>
+          <a class="btn btn-b" href="#quote" data-type="type-business">Quote for my business</a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec how" id="how" aria-labelledby="how-h">
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="eyebrow eyebrow-red">How it works</p>
+        <h2 class="sec-h" id="how-h">Three steps, then it's off your list.</h2>
+      </div>
+      <ol class="steps">
+        <li><span class="n" aria-hidden="true">1</span><h3>Tell us about the job</h3><p>Fill out the form or send a text. Photos help us quote faster.</p></li>
+        <li><span class="n" aria-hidden="true">2</span><h3>Get your free quote</h3><p>You get a clear price before any work starts. No surprises.</p></li>
+        <li><span class="n" aria-hidden="true">3</span><h3>Hand it over</h3><p>We show up, get it done, and walk you through the finished job.</p></li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="sec" aria-labelledby="why-h">
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="eyebrow eyebrow-red">Why Hand It Over</p>
+        <h2 class="sec-h" id="why-h">People you'll want back.</h2>
+      </div>
+      <div class="why-grid">
+        <div class="why-item"><h3>Experienced crew</h3><p>Our cleaners and painters know the work, so the job gets done right the first time.</p></div>
+        <div class="why-item"><h3>English y español</h3><p>Talk to us in whichever language you're most comfortable with.</p></div>
+        <div class="why-item"><h3>Local to Pittsburgh</h3><p>We live and work here, and we treat your place the way we'd want ours treated.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="quote" id="quote" aria-labelledby="quote-h">
+    <div class="wrap quote-in">
+      <div class="quote-side">
+        <p class="eyebrow">Free quote</p>
+        <h2 class="sec-h" id="quote-h">Tell us what you need.</h2>
+        <p>Send a few details and we'll reply with a clear price.</p>
+        <div class="contact">
+          <p class="c-label">Call or text</p><p class="c-val">412-266-2242</p>
+          <p class="c-label">Email</p><p class="c-val">info@handitoverpgh.com</p>
+        </div>
+      </div>
+      <form class="form" id="quote-form" action="https://formsubmit.co/info@handitoverpgh.com" method="POST">
+        <input type="hidden" name="_subject" value="New quote request from handitoverpgh.com"><input type="hidden" name="_template" value="table"><input type="text" name="_honey" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+        <fieldset>
+          <legend>This is for my</legend>
+          <label class="pill"><input type="radio" name="Property" id="type-home" value="Home" checked><span>Home</span></label>
+          <label class="pill"><input type="radio" name="Property" id="type-business" value="Business"><span>Business</span></label>
+        </fieldset>
+        <div class="fgrid">
+          <div class="field"><label for="f-name">Name</label><input id="f-name" name="Name" autocomplete="name" required></div>
+          <div class="field"><label for="f-phone">Phone</label><input id="f-phone" name="Phone" type="tel" autocomplete="tel" required></div>
+          <div class="field"><label for="f-email">Email</label><input id="f-email" name="email" type="email" autocomplete="email"></div>
+          <div class="field"><label for="f-area">Neighborhood or ZIP</label><input id="f-area" name="Area" autocomplete="postal-code"></div>
+        </div>
+        <div class="field">
+          <label for="f-service">What do you need?</label>
+          <select id="f-service" name="Service">
+            <option>House cleaning</option>
+            <option>Deep clean</option>
+            <option>Move-in or move-out cleaning</option>
+            <option>Office or commercial cleaning</option>
+            <option>Interior painting</option>
+            <option>Exterior painting</option>
+            <option>Not sure yet</option>
+          </select>
+        </div>
+        <div class="field"><label for="f-details">Tell us about the job</label><textarea id="f-details" name="Details" placeholder="Size of the space, timing, anything we should know"></textarea></div>
+        <button class="btn btn-y" type="submit">Send my request</button>
+        <p class="form-note" id="form-note" role="status">We only use your info to reply about this job.</p>
+      </form>
+    </div>
+  </section>
+</main>
+
+<footer class="foot">
+  <div class="wrap foot-in">
+    <div class="foot-brand">
+      <span class="hio" aria-hidden="true"><b>HIO</b><span class="bars"><span></span><span></span><span></span></span></span>
+      <div><strong>Hand It Over Cleaning &amp; Painting</strong><span>Serving Pittsburgh, PA and nearby communities</span></div>
+    </div>
+    <div class="foot-meta">
+      <p>Clean and Pure LLC, doing business as Hand It Over</p>
+      <!-- Once registered, add your PA Home Improvement Contractor number here, e.g. <p>PA HIC #PA000000</p> (required on ads for home painting) -->
+      <p>&copy; 2026 Hand It Over</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  document.querySelectorAll('[data-type]').forEach(function(a){
+    a.addEventListener('click', function(){
+      var r = document.getElementById(a.getAttribute('data-type'));
+      if (r) r.checked = true;
+    });
+  });
+  var form = document.getElementById('quote-form');
+  var note = document.getElementById('form-note');
+  form.addEventListener('submit', function(e){
+    if (/YOUR-EMAIL/.test(decodeURIComponent(form.action))) { e.preventDefault(); note.textContent = 'Setup needed: add your email to the form before launch.'; }
+  });
+})();
+</script>
+
+</body>
+</html>
