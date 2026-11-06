@@ -344,13 +344,13 @@ p{margin:0}
           </select>
         </div>
         <div class="field"><label for="f-details">Cuéntenos del trabajo</label><textarea id="f-details" name="Details" placeholder="Tamaño del espacio, fechas, cualquier detalle importante"></textarea></div>
-        <div class="uploader" data-max="5">
+        <div class="uploader" data-max="15">
           <p class="f-label" id="q-photos-label">Fotos (opcional)</p>
           <div class="up-row">
             <label class="up-btn"><input type="file" id="q-photos" accept="image/*" multiple aria-describedby="q-photos-hint"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 8h3l2-3h6l2 3h3v11H4z"></path><circle cx="12" cy="13" r="3.5"></circle></svg>Agregar fotos</label>
             <span class="up-count" aria-live="polite"></span>
           </div>
-          <p class="up-hint" id="q-photos-hint">Hasta 5 fotos del espacio. Nos ayudan a cotizar más rápido.</p>
+          <p class="up-hint" id="q-photos-hint">Hasta 15 fotos del espacio. Nos ayudan a cotizar más rápido.</p>
           <ul class="thumbs" hidden></ul>
           <p class="up-msg" role="alert"></p>
         </div>
@@ -458,20 +458,29 @@ p{margin:0}
     catch (e) { return false; }
   })();
 
-  // Shrink big phone photos so a submission stays under the 10 MB limit
-  function shrink(f){
-    if (f.size < 700 * 1024) return Promise.resolve(f);
+  // Shrink phone photos so the whole submission stays under the 10 MB limit
+  function encode(im, maxDim, q){
+    var s = Math.min(1, maxDim / Math.max(im.naturalWidth, im.naturalHeight));
+    var c = document.createElement('canvas');
+    c.width = Math.round(im.naturalWidth * s); c.height = Math.round(im.naturalHeight * s);
+    c.getContext('2d').drawImage(im, 0, 0, c.width, c.height);
+    return new Promise(function(res){ c.toBlob(res, 'image/jpeg', q); });
+  }
+  function shrink(f, budget){
+    if (f.size <= Math.min(budget, 700 * 1024)) return Promise.resolve(f);
     return new Promise(function(res){
       var u = URL.createObjectURL(f), im = new Image();
       im.onload = function(){
-        var s = Math.min(1, 1800 / Math.max(im.naturalWidth, im.naturalHeight));
-        var c = document.createElement('canvas');
-        c.width = Math.round(im.naturalWidth * s); c.height = Math.round(im.naturalHeight * s);
-        c.getContext('2d').drawImage(im, 0, 0, c.width, c.height);
-        URL.revokeObjectURL(u);
-        c.toBlob(function(b){
-          res(b && b.size < f.size ? new File([b], f.name.replace(/\.[^.]+$/, '') + '.jpg', { type: 'image/jpeg' }) : f);
-        }, 'image/jpeg', 0.82);
+        var tries = [[1800, .82], [1600, .74], [1400, .68], [1200, .64], [1000, .6], [800, .56]], i = 0, best = null;
+        (function next(){
+          encode(im, tries[i][0], tries[i][1]).then(function(b){
+            if (b && (!best || b.size < best.size)) best = b;
+            if ((b && b.size <= budget) || ++i >= tries.length) {
+              URL.revokeObjectURL(u);
+              res(best && best.size < f.size ? new File([best], f.name.replace(/\.[^.]+$/, '') + '.jpg', { type: 'image/jpeg' }) : f);
+            } else next();
+          });
+        })();
       };
       im.onerror = function(){ URL.revokeObjectURL(u); res(f); };
       im.src = u;
@@ -529,7 +538,11 @@ p{margin:0}
     return {
       prepare: function(form){
         form.querySelectorAll('input[data-gen]').forEach(function(n){ n.remove(); });
-        return Promise.all(files.map(function(it){ return shrink(it.file); })).then(function(out){
+        var budget = Math.floor(9 * 1024 * 1024 / Math.max(1, files.length)), out = [];
+        // one photo at a time so phones don't run out of memory
+        return files.reduce(function(chain, it){
+          return chain.then(function(){ return shrink(it.file, budget).then(function(f){ out.push(f); }); });
+        }, Promise.resolve()).then(function(){
           var total = out.reduce(function(s, f){ return s + f.size; }, 0);
           if (total > 9.5 * 1024 * 1024) { msg.textContent = T.tooBig; return false; }
           out.forEach(function(f, i){
