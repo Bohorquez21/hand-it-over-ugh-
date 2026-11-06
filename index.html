@@ -6,20 +6,24 @@
 <title>Hand It Over Cleaning &amp; Painting | Pittsburgh</title>
 <meta name="description" content="Hand It Over: cleaning and painting for Pittsburgh homes and businesses. Recurring and deep cleaning, move-outs, interior and exterior painting. Free quotes. Hablamos español.">
 <link rel="canonical" href="https://handitoverpgh.com/">
+<link rel="alternate" hreflang="en" href="https://handitoverpgh.com/">
+<link rel="alternate" hreflang="es" href="https://handitoverpgh.com/es/">
+<link rel="alternate" hreflang="x-default" href="https://handitoverpgh.com/">
 <link rel="icon" type="image/png" href="assets/favicon.png">
 <link rel="apple-touch-icon" href="assets/favicon.png">
 <meta name="theme-color" content="#003893">
 <meta property="og:type" content="website">
-<meta property="og:title" content="Hand It Over Cleaning &amp; Painting">
+<meta property="og:locale" content="en_US">
+<meta property="og:title" content="Hand It Over Cleaning &amp; Painting | Pittsburgh">
 <meta property="og:description" content="Hand It Over: cleaning and painting for Pittsburgh homes and businesses. Recurring and deep cleaning, move-outs, interior and exterior painting. Free quotes. Hablamos español.">
 <meta property="og:url" content="https://handitoverpgh.com/">
 <meta property="og:image" content="https://handitoverpgh.com/assets/og-image.png">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;600;700;800;900&display=swap">
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "HouseCleaningService", "name": "Hand It Over Cleaning & Painting", "url": "https://handitoverpgh.com", "image": "https://handitoverpgh.com/assets/og-image.png", "areaServed": "Pittsburgh, PA", "knowsLanguage": ["en", "es"], "legalName": "Clean and Pure LLC", "telephone": "+1-412-266-2242", "email": "info@handitoverpgh.com"}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "HouseCleaningService", "name": "Hand It Over Cleaning & Painting", "url": "https://handitoverpgh.com/", "image": "https://handitoverpgh.com/assets/og-image.png", "areaServed": "Pittsburgh, PA", "knowsLanguage": ["en", "es"], "legalName": "Clean and Pure LLC", "telephone": "+1-412-266-2242", "email": "info@handitoverpgh.com"}</script>
 </head>
 <body>
 <style>
-/* Layout: brand-blue bands (hero, quote) bracket white working sections; stacked wordmark is the one loud moment */
+/* Layout: brand-blue bands (hero, quote) bracket white and tint working sections; stacked wordmark is the one loud moment */
 :root{
   --blue:#003893; --blue-deep:#00296E; --blue-line:#2B5BB0; --tint:#EEF2FA; --line:#D3DCEC;
   --yellow:#FCD116; --red:#CE1126; --ink:#13203D; --muted:#46526D; --paper:#FFFFFF;
@@ -38,10 +42,12 @@ a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,te
 .wrap{max-width:1140px;margin:0 auto;padding-left:var(--gut-l);padding-right:var(--gut-r)}
 h1,h2,h3{text-wrap:balance;margin:0}
 p{margin:0}
+[hidden]{display:none!important}
 
 /* buttons */
 .btn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:0 22px;border-radius:999px;font-weight:800;font-size:16px;text-decoration:none;border:2px solid transparent;transition:transform .15s ease, background-color .15s ease}
 .btn:hover{transform:translateY(-1px)}
+.btn[disabled]{opacity:.7;cursor:progress;transform:none}
 .btn-y{background:var(--yellow);color:var(--blue)}
 .btn-y:hover{background:#FFE04D}
 .btn-b{background:var(--blue);color:var(--paper)}
@@ -61,17 +67,21 @@ p{margin:0}
 /* header */
 .top{position:sticky;top:env(safe-area-inset-top,0px);z-index:9;background:var(--blue);border-bottom:1px solid var(--blue-line)}
 .top-in{display:flex;align-items:center;gap:24px;min-height:68px}
-.brand{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--paper)}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--paper);min-width:0}
 .brand .hio{background:var(--paper)}
 .brand .hio b{color:var(--blue)}
 .brand .hio .bars span{background:var(--blue)}
 .brand .hio .bars span:first-child{background:var(--yellow)}
 .brand .hio .bars span:last-child{background:var(--red)}
-.brand-name{font-family:var(--f-display);font-weight:900;font-size:19px;letter-spacing:-.3px}
-.nav{display:flex;gap:26px;margin-left:auto}
-.nav a{color:var(--paper);text-decoration:none;font-weight:600;font-size:15px;opacity:.9}
+.brand-name{font-family:var(--f-display);font-weight:900;font-size:19px;letter-spacing:-.3px;white-space:nowrap}
+.nav{display:flex;gap:24px;margin-left:auto}
+.nav a{color:var(--paper);text-decoration:none;font-weight:600;font-size:15px;opacity:.9;white-space:nowrap}
 .nav a:hover{opacity:1;text-decoration:underline;text-underline-offset:4px}
-@media (max-width:760px){.nav{display:none}.top-in .btn{margin-left:auto}}
+.top-actions{display:flex;align-items:center;gap:10px}
+.lang{display:inline-flex;align-items:center;justify-content:center;min-height:42px;min-width:48px;padding:0 12px;border:2px solid rgba(255,255,255,.55);border-radius:999px;color:var(--paper);font-weight:800;font-size:14px;letter-spacing:.06em;text-decoration:none}
+.lang:hover{border-color:var(--paper)}
+@media (max-width:960px){.nav{display:none}.top-actions{margin-left:auto}}
+@media (max-width:370px){.brand-name{display:none}}
 
 /* hero */
 .hero{background:var(--blue);color:var(--paper);position:relative}
@@ -108,7 +118,7 @@ p{margin:0}
 .door-top h3{font-family:var(--f-display);font-weight:900;font-size:28px;line-height:1.1;letter-spacing:-.01em}
 .checks{list-style:none;margin:0;padding:24px 28px 8px;display:flex;flex-direction:column;gap:16px;flex:1}
 .checks li{display:grid;grid-template-columns:24px 1fr;column-gap:12px}
-.checks li::before{content:"";grid-row:span 2;width:22px;height:22px;margin-top:2px;border-radius:50%;background:var(--yellow) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 22 22'%3E%3Cpath d='M6.5 11.3 9.6 14.3 15.5 8' fill='none' stroke='%23003893' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center/22px no-repeat}
+.checks li::before,.mini li::before{content:"";grid-row:span 2;width:22px;height:22px;margin-top:2px;border-radius:50%;background:var(--yellow) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 22 22'%3E%3Cpath d='M6.5 11.3 9.6 14.3 15.5 8' fill='none' stroke='%23003893' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center/22px no-repeat}
 .checks strong{font-weight:800;font-size:18px;color:var(--ink)}
 .checks span{color:var(--muted);font-size:16px}
 .door .btn{margin:20px 28px 28px;align-self:flex-start}
@@ -131,17 +141,24 @@ p{margin:0}
 .why-item h3{font-family:var(--f-display);font-weight:900;font-size:22px;color:var(--ink)}
 .why-item p{color:var(--muted)}
 
-/* quote */
+/* form sections (quote on blue, careers on tint) */
+.split{display:flex;flex-wrap:wrap;gap:40px 64px;padding-block:88px}
+.split-side{flex:1 1 300px;min-width:0;display:flex;flex-direction:column;gap:16px;max-width:420px}
+.side-p{font-size:18px}
 .quote{background:var(--blue);color:var(--paper)}
-.quote-in{display:flex;flex-wrap:wrap;gap:40px 64px;padding-block:88px}
-.quote-side{flex:1 1 300px;min-width:0;display:flex;flex-direction:column;gap:16px;max-width:420px}
-.quote-side .sec-h{color:var(--paper)}
-.quote-side>p{color:#DCE5F6;font-size:18px}
+.quote .sec-h{color:var(--paper)}
+.quote .side-p{color:#DCE5F6}
+.careers{background:var(--tint)}
+.careers .side-p{color:var(--muted)}
 .contact{display:grid;grid-template-columns:auto 1fr;gap:6px 16px;margin-top:12px;padding-top:20px;border-top:1px solid var(--blue-line)}
 .c-label{font-size:13px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--yellow);padding-top:3px}
 .c-val{font-weight:700;font-size:17px;user-select:all;overflow-wrap:anywhere}
+.mini{list-style:none;margin:8px 0 0;padding:0;display:flex;flex-direction:column;gap:12px}
+.mini li{display:grid;grid-template-columns:24px 1fr;column-gap:12px;font-weight:700}
+.mini li::before{grid-row:auto}
 .form{flex:2 1 460px;min-width:0;background:var(--paper);color:var(--ink);border-radius:22px;padding:32px;display:flex;flex-direction:column;gap:18px}
-.form fieldset{border:0;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:10px;align-items:center}
+.careers .form{border:1px solid var(--line)}
+.form fieldset{border:0;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:10px;align-items:center;min-width:0}
 .form legend{font-weight:800;font-size:15px;margin-bottom:10px;width:100%}
 .pill{position:relative}
 .pill input{position:absolute;opacity:0;inset:0;margin:0;cursor:pointer}
@@ -150,14 +167,31 @@ p{margin:0}
 .pill input:focus-visible+span{outline:3px solid var(--yellow);outline-offset:2px}
 .fgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,220px),1fr));gap:16px}
 .field{display:flex;flex-direction:column;gap:6px;min-width:0}
-.field label{font-weight:700;font-size:14px}
+.field label,.f-label{font-weight:700;font-size:14px}
 .field input,.field select,.field textarea{font:inherit;font-size:16px;color:var(--ink);background:var(--paper);border:2px solid var(--line);border-radius:12px;padding:11px 14px;min-height:48px;width:100%}
 .field textarea{min-height:120px;resize:vertical}
 .field input:focus,.field select:focus,.field textarea:focus{border-color:var(--blue);outline:none}
 .form .btn{align-self:flex-start;border:0;cursor:pointer;font-family:inherit}
 .form-note{font-size:14px;color:var(--muted)}
-.form-note.ok{color:var(--blue);font-weight:700}
+.form-flash{background:var(--yellow);color:var(--blue);font-weight:800;border-radius:12px;padding:14px 16px}
 .hp{position:absolute;left:-9999px}
+
+/* photo uploader */
+.uploader{display:flex;flex-direction:column;gap:10px;min-width:0}
+.up-row{display:flex;flex-wrap:wrap;align-items:center;gap:8px 14px}
+.up-btn{position:relative;display:inline-flex;align-items:center;gap:10px;min-height:48px;padding:0 18px;border:2px dashed var(--blue-line);border-radius:12px;background:var(--tint);color:var(--blue);font-weight:800;font-size:15px;cursor:pointer}
+.up-btn:hover{border-style:solid}
+.up-btn input{position:absolute;inset:0;width:100%;height:100%;opacity:0;cursor:pointer}
+.up-btn:focus-within{outline:3px solid var(--yellow);outline-offset:2px}
+.up-hint{font-size:14px;color:var(--muted)}
+.up-count{font-size:14px;font-weight:700;color:var(--blue)}
+.up-msg{font-size:14px;font-weight:700;color:var(--red)}
+.up-msg:empty{display:none}
+.thumbs{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:10px}
+.thumbs li{position:relative;width:88px;height:88px;border-radius:12px;overflow:hidden;background:var(--tint);border:1px solid var(--line);display:flex;align-items:center;justify-content:center}
+.thumbs img{width:100%;height:100%;object-fit:cover;display:block}
+.thumbs .fname{font-size:11px;padding:6px;overflow-wrap:anywhere;color:var(--muted);text-align:center}
+.thumbs button{position:absolute;top:4px;right:4px;width:32px;height:32px;border-radius:50%;border:0;background:rgba(19,32,61,.88);color:var(--paper);font-size:20px;line-height:1;cursor:pointer;display:flex;align-items:center;justify-content:center}
 
 /* footer */
 .foot{background:var(--ink);color:#C9D2E6}
@@ -166,7 +200,10 @@ p{margin:0}
 .foot-brand strong{display:block;color:var(--paper);font-family:var(--f-display);font-weight:900;font-size:18px}
 .foot-brand span{font-size:14px}
 .foot-meta{font-size:14px;display:flex;flex-direction:column;gap:2px;text-align:right}
-@media (max-width:600px){.foot-meta{text-align:left}.form{padding:22px}.hero-in{padding-block:52px 72px}.sec{padding-block:64px}}
+.foot-links{display:flex;flex-wrap:wrap;gap:6px 18px;justify-content:flex-end;margin-bottom:6px}
+.foot-links a{color:var(--paper);font-weight:700;text-decoration:none}
+.foot-links a:hover{text-decoration:underline;text-underline-offset:4px}
+@media (max-width:600px){.foot-meta{text-align:left}.foot-links{justify-content:flex-start}.form{padding:22px}.hero-in{padding-block:52px 72px}.sec,.split{padding-block:64px}}
 </style>
 
 <header class="top">
@@ -179,8 +216,12 @@ p{margin:0}
       <a href="#home">For homes</a>
       <a href="#business">For businesses</a>
       <a href="#how">How it works</a>
+      <a href="#careers">Work with us</a>
     </nav>
-    <a class="btn btn-y btn-sm" href="#quote">Free quote</a>
+    <div class="top-actions">
+      <a class="lang" href="/es/" hreflang="es" lang="es" aria-label="Ver el sitio en español">ES</a>
+      <a class="btn btn-y btn-sm" href="#quote">Free quote</a>
+    </div>
   </div>
 </header>
 
@@ -272,18 +313,19 @@ p{margin:0}
   </section>
 
   <section class="quote" id="quote" aria-labelledby="quote-h">
-    <div class="wrap quote-in">
-      <div class="quote-side">
+    <div class="wrap split">
+      <div class="split-side">
         <p class="eyebrow">Free quote</p>
         <h2 class="sec-h" id="quote-h">Tell us what you need.</h2>
-        <p>Send a few details and we'll reply with a clear price.</p>
+        <p class="side-p">Send a few details and photos, and we'll reply with a clear price.</p>
         <div class="contact">
           <p class="c-label">Call or text</p><p class="c-val">412-266-2242</p>
           <p class="c-label">Email</p><p class="c-val">info@handitoverpgh.com</p>
         </div>
       </div>
-      <form class="form" id="quote-form" action="https://formsubmit.co/info@handitoverpgh.com" method="POST">
-        <input type="hidden" name="_subject" value="New quote request from handitoverpgh.com"><input type="hidden" name="_template" value="table"><input type="text" name="_honey" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+      <form class="form" id="quote-form" action="https://formsubmit.co/info@handitoverpgh.com" method="POST" enctype="multipart/form-data">
+        <p class="form-flash" role="status" hidden></p>
+        <input type="hidden" name="_subject" value="New quote request from handitoverpgh.com"><input type="hidden" name="_template" value="table"><input type="hidden" name="_next" value="https://handitoverpgh.com/?sent=quote#quote"><input type="hidden" name="Site language" value="English"><input type="text" name="_honey" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
         <fieldset>
           <legend>This is for my</legend>
           <label class="pill"><input type="radio" name="Property" id="type-home" value="Home" checked><span>Home</span></label>
@@ -298,18 +340,74 @@ p{margin:0}
         <div class="field">
           <label for="f-service">What do you need?</label>
           <select id="f-service" name="Service">
-            <option>House cleaning</option>
-            <option>Deep clean</option>
-            <option>Move-in or move-out cleaning</option>
-            <option>Office or commercial cleaning</option>
-            <option>Interior painting</option>
-            <option>Exterior painting</option>
-            <option>Not sure yet</option>
+            <option>House cleaning</option><option>Deep clean</option><option>Move-in or move-out cleaning</option><option>Office or commercial cleaning</option><option>Interior painting</option><option>Exterior painting</option><option>Not sure yet</option>
           </select>
         </div>
         <div class="field"><label for="f-details">Tell us about the job</label><textarea id="f-details" name="Details" placeholder="Size of the space, timing, anything we should know"></textarea></div>
+        <div class="uploader" data-max="5">
+          <p class="f-label" id="q-photos-label">Photos (optional)</p>
+          <div class="up-row">
+            <label class="up-btn"><input type="file" id="q-photos" accept="image/*" multiple aria-describedby="q-photos-hint"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 8h3l2-3h6l2 3h3v11H4z"></path><circle cx="12" cy="13" r="3.5"></circle></svg>Add photos</label>
+            <span class="up-count" aria-live="polite"></span>
+          </div>
+          <p class="up-hint" id="q-photos-hint">Up to 5 photos of the space. They help us quote faster.</p>
+          <ul class="thumbs" hidden></ul>
+          <p class="up-msg" role="alert"></p>
+        </div>
         <button class="btn btn-y" type="submit">Send my request</button>
-        <p class="form-note" id="form-note" role="status">We only use your info to reply about this job.</p>
+        <p class="form-note">We only use your info to reply about this job.</p>
+      </form>
+    </div>
+  </section>
+
+  <section class="careers" id="careers" aria-labelledby="jobs-h">
+    <div class="wrap split">
+      <div class="split-side">
+        <p class="eyebrow eyebrow-red">Work with us</p>
+        <h2 class="sec-h" id="jobs-h">Join the crew.</h2>
+        <p class="side-p">We're looking for reliable cleaners and painters in the Pittsburgh area. Tell us a little about yourself and we'll reach out.</p>
+        <ul class="mini">
+          <li>Reliable and on time</li>
+          <li>Takes pride in the details</li>
+          <li>English, Spanish or both</li>
+        </ul>
+      </div>
+      <form class="form" id="job-form" action="https://formsubmit.co/info@handitoverpgh.com" method="POST" enctype="multipart/form-data">
+        <p class="form-flash" role="status" hidden></p>
+        <input type="hidden" name="_subject" value="New job application from handitoverpgh.com"><input type="hidden" name="_template" value="table"><input type="hidden" name="_next" value="https://handitoverpgh.com/?sent=job#careers"><input type="hidden" name="Site language" value="English"><input type="text" name="_honey" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+        <fieldset>
+          <legend>I'm interested in</legend>
+          <label class="pill"><input type="radio" name="Position" id="pos-clean" value="Cleaning" checked><span>Cleaning</span></label>
+          <label class="pill"><input type="radio" name="Position" id="pos-paint" value="Painting"><span>Painting</span></label>
+          <label class="pill"><input type="radio" name="Position" id="pos-both" value="Either"><span>Either</span></label>
+        </fieldset>
+        <div class="fgrid">
+          <div class="field"><label for="j-name">Name</label><input id="j-name" name="Name" autocomplete="name" required></div>
+          <div class="field"><label for="j-phone">Phone</label><input id="j-phone" name="Phone" type="tel" autocomplete="tel" required></div>
+          <div class="field"><label for="j-email">Email</label><input id="j-email" name="email" type="email" autocomplete="email"></div>
+          <div class="field"><label for="j-area">Neighborhood or ZIP</label><input id="j-area" name="Area" autocomplete="postal-code"></div>
+          <div class="field">
+            <label for="j-avail">Availability</label>
+            <select id="j-avail" name="Availability"><option>Full-time</option><option>Part-time</option><option>Weekends only</option><option>Flexible</option></select>
+          </div>
+          <div class="field">
+            <label for="j-exp">Experience</label>
+            <select id="j-exp" name="Experience"><option>None yet, ready to learn</option><option>Less than 1 year</option><option>1 to 3 years</option><option>More than 3 years</option></select>
+          </div>
+        </div>
+        <div class="field"><label for="j-why">Why do you want to work with us?</label><textarea id="j-why" name="Why they want the job" placeholder="A few sentences about you and the kind of work you've done" required></textarea></div>
+        <div class="uploader" data-max="3">
+          <p class="f-label">Photos of past work (optional)</p>
+          <div class="up-row">
+            <label class="up-btn"><input type="file" id="j-photos" accept="image/*" multiple aria-describedby="j-photos-hint"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 8h3l2-3h6l2 3h3v11H4z"></path><circle cx="12" cy="13" r="3.5"></circle></svg>Add photos</label>
+            <span class="up-count" aria-live="polite"></span>
+          </div>
+          <p class="up-hint" id="j-photos-hint">Painters: show us up to 3 jobs you're proud of.</p>
+          <ul class="thumbs" hidden></ul>
+          <p class="up-msg" role="alert"></p>
+        </div>
+        <button class="btn btn-b" type="submit">Send my application</button>
+        <p class="form-note">We'll only use your info to contact you about working with us.</p>
       </form>
     </div>
   </section>
@@ -322,6 +420,11 @@ p{margin:0}
       <div><strong>Hand It Over Cleaning &amp; Painting</strong><span>Serving Pittsburgh, PA and nearby communities</span></div>
     </div>
     <div class="foot-meta">
+      <nav class="foot-links" aria-label="Footer">
+        <a href="#quote">Get a free quote</a>
+        <a href="#careers">Work with us</a>
+        <a class="lang-link" href="/es/" hreflang="es" lang="es">Español</a>
+      </nav>
       <p>Clean and Pure LLC, doing business as Hand It Over</p>
       <!-- Once registered, add your PA Home Improvement Contractor number here, e.g. <p>PA HIC #PA000000</p> (required on ads for home painting) -->
       <p>&copy; 2026 Hand It Over</p>
@@ -331,17 +434,139 @@ p{margin:0}
 
 <script>
 (function(){
+  var T = {"sending": "Sending...", "remove": "Remove photo", "max": "You can add up to {n} photos.", "count": "{n} of {max} added", "tooBig": "Those photos are too large to send together. Try removing one or two.", "oneHint": "You can attach 1 photo.", "preview": "Preview only. On your live site this sends straight to info@handitoverpgh.com.", "ok_quote": "Thanks! We got your request and will reach out soon.", "ok_job": "Thanks for applying! We'll be in touch."};
+  var PREVIEW = false;
+
+  // Language switch keeps the visitor on the same section
+  document.querySelectorAll('.lang, .lang-link').forEach(function(a){
+    a.addEventListener('click', function(){
+      if (!PREVIEW && location.hash) a.href = a.getAttribute('href').split('#')[0] + location.hash;
+    });
+  });
+
+  // "Quote for my home/business" preselects the matching option
   document.querySelectorAll('[data-type]').forEach(function(a){
     a.addEventListener('click', function(){
       var r = document.getElementById(a.getAttribute('data-type'));
       if (r) r.checked = true;
     });
   });
-  var form = document.getElementById('quote-form');
-  var note = document.getElementById('form-note');
-  form.addEventListener('submit', function(e){
-    if (/YOUR-EMAIL/.test(decodeURIComponent(form.action))) { e.preventDefault(); note.textContent = 'Setup needed: add your email to the form before launch.'; }
+
+  // Can this browser hand resized photos to the form? (all current browsers can)
+  var canAssign = (function(){
+    try { var d = new DataTransfer(); d.items.add(new File(['x'], 'x.txt', { type: 'text/plain' })); return d.files.length === 1; }
+    catch (e) { return false; }
+  })();
+
+  // Shrink big phone photos so a submission stays under the 10 MB limit
+  function shrink(f){
+    if (f.size < 700 * 1024) return Promise.resolve(f);
+    return new Promise(function(res){
+      var u = URL.createObjectURL(f), im = new Image();
+      im.onload = function(){
+        var s = Math.min(1, 1800 / Math.max(im.naturalWidth, im.naturalHeight));
+        var c = document.createElement('canvas');
+        c.width = Math.round(im.naturalWidth * s); c.height = Math.round(im.naturalHeight * s);
+        c.getContext('2d').drawImage(im, 0, 0, c.width, c.height);
+        URL.revokeObjectURL(u);
+        c.toBlob(function(b){
+          res(b && b.size < f.size ? new File([b], f.name.replace(/\.[^.]+$/, '') + '.jpg', { type: 'image/jpeg' }) : f);
+        }, 'image/jpeg', 0.82);
+      };
+      im.onerror = function(){ URL.revokeObjectURL(u); res(f); };
+      im.src = u;
+    });
+  }
+
+  function Uploader(root){
+    var pick = root.querySelector('input[type=file]');
+    var list = root.querySelector('.thumbs');
+    var msg = root.querySelector('.up-msg');
+    var count = root.querySelector('.up-count');
+    var max = +root.getAttribute('data-max');
+    var files = [];
+
+    if (!canAssign) {
+      pick.name = 'photo'; pick.removeAttribute('multiple');
+      root.querySelector('.up-hint').textContent = T.oneHint;
+      return { prepare: function(){ return Promise.resolve(true); } };
+    }
+
+    pick.addEventListener('change', function(){
+      msg.textContent = '';
+      Array.prototype.forEach.call(pick.files, function(f){
+        if (!/^image\//.test(f.type) && !/\.(heic|heif)$/i.test(f.name)) return;
+        if (files.length >= max) { msg.textContent = T.max.replace('{n}', max); return; }
+        files.push({ file: f, url: URL.createObjectURL(f) });
+      });
+      pick.value = '';
+      render();
+    });
+
+    function render(){
+      while (list.firstChild) list.removeChild(list.firstChild);
+      files.forEach(function(it, i){
+        var li = document.createElement('li');
+        var img = document.createElement('img');
+        img.alt = ''; img.src = it.url;
+        img.onerror = function(){
+          img.remove();
+          var cap = document.createElement('span'); cap.className = 'fname'; cap.textContent = it.file.name;
+          li.insertBefore(cap, li.firstChild);
+        };
+        var b = document.createElement('button');
+        b.type = 'button'; b.textContent = '×';
+        b.setAttribute('aria-label', T.remove + ' ' + (i + 1));
+        b.addEventListener('click', function(){
+          URL.revokeObjectURL(it.url); files.splice(i, 1); msg.textContent = ''; render(); pick.focus();
+        });
+        li.appendChild(img); li.appendChild(b); list.appendChild(li);
+      });
+      list.hidden = files.length === 0;
+      count.textContent = files.length ? T.count.replace('{n}', files.length).replace('{max}', max) : '';
+    }
+
+    return {
+      prepare: function(form){
+        form.querySelectorAll('input[data-gen]').forEach(function(n){ n.remove(); });
+        return Promise.all(files.map(function(it){ return shrink(it.file); })).then(function(out){
+          var total = out.reduce(function(s, f){ return s + f.size; }, 0);
+          if (total > 9.5 * 1024 * 1024) { msg.textContent = T.tooBig; return false; }
+          out.forEach(function(f, i){
+            var inp = document.createElement('input');
+            inp.type = 'file'; inp.name = 'photo' + (i + 1); inp.hidden = true; inp.setAttribute('data-gen', '');
+            var d = new DataTransfer(); d.items.add(f); inp.files = d.files;
+            form.appendChild(inp);
+          });
+          return true;
+        });
+      }
+    };
+  }
+
+  var params = new URLSearchParams(location.search);
+  [['quote-form', 'quote'], ['job-form', 'job']].forEach(function(p){
+    var form = document.getElementById(p[0]);
+    if (!form) return;
+    var flash = form.querySelector('.form-flash');
+    var btn = form.querySelector('button[type=submit]');
+    var label = btn.textContent;
+    var up = Uploader(form.querySelector('.uploader'));
+
+    form.addEventListener('submit', function(e){
+      e.preventDefault();
+      if (PREVIEW) { flash.textContent = T.preview; flash.hidden = false; return; }
+      btn.disabled = true; btn.textContent = T.sending;
+      up.prepare(form).then(function(ok){
+        if (ok) form.submit();
+        else { btn.disabled = false; btn.textContent = label; }
+      }, function(){ btn.disabled = false; btn.textContent = label; });
+    });
+    window.addEventListener('pageshow', function(){ btn.disabled = false; btn.textContent = label; });
+
+    if (params.get('sent') === p[1]) { flash.textContent = T['ok_' + p[1]]; flash.hidden = false; }
   });
+  if (location.search && history.replaceState) history.replaceState(null, '', location.pathname + location.hash);
 })();
 </script>
 
